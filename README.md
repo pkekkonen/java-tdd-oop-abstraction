@@ -102,7 +102,8 @@ There is a `TodoItem` class with poor abstraction in the `./src/main/com/boolean
 
 Using the user stories below, create a domain model or class diagram before creating an implementation in the `./src/main/com/booleanuk/core/` directory.
 
-Add your model / diagram to the project.
+- Your solution should demonstrate good abstraction
+- Add your model / diagram to the project.
 
 ```
 As a system administrator,
