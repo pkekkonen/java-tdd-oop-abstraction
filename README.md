@@ -123,6 +123,10 @@ account is enabled or disabled.
 
 Share your work with your morning teacher for feedback and discussion.
 
+## Next steps
+
+Now that you've practiced abstraction, introduce this concept into your ongoing Bob's Bagels OOP exercise. Refactor your existing code if necessary. You should have multiple classes that hide their implementation details and expose easy to use interfaces for their logic.
+
 ## Test Output
 
 ![](./assets/run-a-test.PNG)
