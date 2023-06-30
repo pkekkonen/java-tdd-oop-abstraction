@@ -15,7 +15,7 @@ We can think of methods as an "interface for the class", though we don't usually
 
 Methods (and members) can be public, so other classes can interact with them, or private. Private means only the class itself can access those particular methods & members. There are other types of visibility that we'll discover later, but those are the two most important ones.
 
-Consider driving a car. The steering wheel, pedals and gear stick are the public interface to the car; they are exposed to the user so they can perform some interactions. We don't need to know how the engine works or how the exhaust system is hooked up in order to drive the car, we just use the simple "methods" that the car has given us. Use the steering wheel to turn, press the pedals to stop and go, the car takes care of all the complex logic.
+Consider driving a car. The steering wheel, pedals and gear stick are the public interface to the car; they are exposed to the user, so they can perform some interactions. We don't need to know how the engine works or how the exhaust system is hooked up in order to drive the car, we just use the simple "methods" that the car has given us. Use the steering wheel to turn, press the pedals to stop and go, the car takes care of all the complex logic.
 
 What I've described there is *abstraction*; hiding the implementation details of a system. Let's try it with a class:
 
@@ -125,7 +125,9 @@ Share your work with your morning teacher for feedback and discussion.
 
 ## Next steps
 
-Now that you've practiced abstraction, introduce this concept into your ongoing Bob's Bagels OOP exercise. Refactor your existing code if necessary. You should have multiple classes that hide their implementation details and expose easy to use interfaces for their logic.
+Now that you've practiced abstraction, introduce this concept into your Bob's Bagels OOP exercise (the OOP one not the single class version). 
+
+Refactor your existing code if necessary. You should have multiple classes that hide their implementation details and expose easy to use interfaces for their logic.
 
 ## Test Output
 
@@ -135,7 +137,7 @@ When you run a test, it's either going to pass or fail. When it fails, you'll be
 
 One of the core skills of a developer is debugging stack traces like this. The stack trace details in which classes & files the failure happened, and gives you a line number at the end. Most of the lines in the stack trace are irrelevant most of the time, you want to try and identify the files that you're actually working with.
 
-In the sample screenshot below, we've tried to complete the first step of the exercise but provided an invalid value. Then we run the test associated with it and we see a big red stack trace, a test failure.
+In the sample screenshot below, we've tried to complete the first step of the exercise but provided an invalid value. Then we run the test associated with it, and we see a big red stack trace, a test failure.
 
 At the top, we see `expected: <32> but was: <33>`. This means the test expected the value to be 32, but the value the student provided was 33. We can see this in the code snippets at the top of the screenshot.
 
