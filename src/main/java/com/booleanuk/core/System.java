@@ -1,6 +1,11 @@
 package com.booleanuk.core;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class System {
+    private HashMap<String, UserAccount> users = new HashMap<>();
+
     public String createUser(String email, String password) {
         if(!isPasswordValid(password)) {
             return "invalid password";
@@ -8,11 +13,16 @@ public class System {
         if(!isEmailValid(email)) {
             return "invalid email";
         }
+        users.put(email, new UserAccount(email, password));
         return "user created";
     }
 
     public UserAccount login(String email, String password) {
-        return null;
+        UserAccount user = users.get(email);
+        if(!user.isCorrectPassword(password)) {
+            return null;
+        }
+        return user;
     }
 
     private boolean isPasswordValid(String password) {

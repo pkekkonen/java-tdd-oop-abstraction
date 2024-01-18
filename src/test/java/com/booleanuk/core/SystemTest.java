@@ -54,4 +54,25 @@ public class SystemTest {
         UserAccount user = system.login(email, password);
         Assertions.assertFalse(user.isEnabled());
     }
+
+    @Test
+    public void enableAccountTest() {
+        System system = new System();
+        String email = "bob@gmail.com";
+        String password = "12345678";
+        system.createUser(email, password);
+        UserAccount user = system.login(email, password);
+        user.enable();
+        Assertions.assertTrue(user.isEnabled());
+    }
+
+    @Test
+    public void logInFail() {
+        System system = new System();
+        String email = "bob@gmail.com";
+        String password = "12345678";
+        system.createUser(email, password);
+        UserAccount user = system.login(email, "123456778");
+        Assertions.assertNull(user);
+    }
 }
