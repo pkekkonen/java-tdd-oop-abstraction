@@ -44,4 +44,14 @@ public class SystemTest {
         String expected = "user created";
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void newAccountIsDisabledTest() {
+        System system = new System();
+        String email = "bob@gmail.com";
+        String password = "12345678";
+        system.createUser(email, password);
+        UserAccount user = system.login(email, password);
+        Assertions.assertFalse(user.isEnabled());
+    }
 }

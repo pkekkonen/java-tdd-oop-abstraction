@@ -11,6 +11,10 @@ public class System {
         return "user created";
     }
 
+    public UserAccount login(String email, String password) {
+        return null;
+    }
+
     private boolean isPasswordValid(String password) {
         return password.length() >= 8;
     }
