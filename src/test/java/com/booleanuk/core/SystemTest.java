@@ -21,7 +21,7 @@ public class SystemTest {
         String email = "bob@gmail.com";
         String password = "12345678";
         String actual = system.createUser(email, password);
-        String expected = "User created";
+        String expected = "user created";
         Assertions.assertEquals(expected, actual);
     }
 
