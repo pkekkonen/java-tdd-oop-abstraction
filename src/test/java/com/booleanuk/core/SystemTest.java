@@ -34,4 +34,14 @@ public class SystemTest {
         String expected = "invalid email";
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void createUserValidEmail() {
+        System system = new System();
+        String email = "bob@gmail.com";
+        String password = "12345678";
+        String actual = system.createUser(email, password);
+        String expected = "user created";
+        Assertions.assertEquals(expected, actual);
+    }
 }
